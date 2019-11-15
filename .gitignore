@@ -209,5 +209,6 @@ $RECYCLE.BIN/
 
 ### Documents ###
 ICT융합공학과 2019551008 김재광 프로젝트 제안서(학교 공지사항 알리미).pdf
+*.csv
 
 # End of https://www.gitignore.io/api/c++,macos,python,windows,visualstudiocode
