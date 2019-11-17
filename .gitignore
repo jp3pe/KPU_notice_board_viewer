@@ -69,6 +69,7 @@ Temporary Items
 __pycache__/
 *.py[cod]
 *$py.class
+test.py
 
 # C extensions
 
