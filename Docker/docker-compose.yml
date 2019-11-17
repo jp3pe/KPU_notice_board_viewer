@@ -1,0 +1,20 @@
+version: "3.3"
+services: 
+  data:
+    stdin_open: true
+    tty: true
+    # command: touch -R /var/lib/mysql
+    container_name: kpu_bulletin_board_db
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "qwer1234"
+    ports:
+      - "127.0.0.1:53306:3306"
+    expose:
+      - "3306"
+    # command: /bin/bash
+    volumes:
+      - type: bind
+        target: /var/lib/mysql
+        source: /Users/jp3pe/Documents/Project/KPU/Notice notificater/Docker/Volume/MySQL
