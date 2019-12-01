@@ -35,7 +35,10 @@ for a in soup.find_all('a', href=True):
         url = str(a['href']).replace("/viewcount.do?rtnUrl=", "")
         # 원래 URL형식으로 특수문자를 변환한다.
         url = url.replace("^", "&")
-        urls.append(url)
+        if url in urls:
+            continue
+        else:
+            urls.append(url)
 
 for i in range(len(urls)):
     page = requests.get("http://www.kpu.ac.kr" + str(urls[i]))
