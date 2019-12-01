@@ -1,6 +1,18 @@
 from bs4 import BeautifulSoup
 import requests
+import mysql.connector
 
+kpu = mysql.connector.connect(
+    host="localhost",
+    port="53306",
+    user="root",
+    passwd="qwer1234",
+    database = "kpu"
+)
+
+mycursor = kpu.cursor()
+
+sql = "Insert Into bulletin_board(title, content) Values(%s, %s)"
 
 # 공지사항 URL을 저장하기 위한 변수 선언
 university_bulletin_board_url1 = 'http://www.kpu.ac.kr/front/boardlist.do?currentPage='
@@ -50,3 +62,8 @@ for page_num in range(1, 6):
         # 본문을 리스트에 저장
         article = soup.find(class_='article')
         details.append(article.text)
+
+        # SQL 구문을 통한 DBMS 접근
+        val = (titles[i], details[i])
+        mycursor.execute(sql, val)
+        kpu.commit()
