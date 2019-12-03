@@ -11,5 +11,12 @@
             "program": "${file}",
             "console": "integratedTerminal"
         },
+        {
+            "name": "C++ Debug",
+            "type": "lldb",
+            "request": "launch",
+            "program": "{workspaceFolder}/main.cpp",
+            "args": [],
+        }
     ]
 }
