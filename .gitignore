@@ -36,6 +36,9 @@
 *.out
 *.app
 
+# Testing
+test*
+
 ### macOS ###
 # General
 .DS_Store
