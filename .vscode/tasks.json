@@ -14,6 +14,7 @@
             "command": "/usr/bin/clang++",
             "args": [
                 "--std=c++11",
+                "/usr/local/Cellar/mysql-connector-c++/8.0.18_1/lib/libmysqlcppconn8.dylib",
                 "-g",
                 "${file}",
                 "-o",
