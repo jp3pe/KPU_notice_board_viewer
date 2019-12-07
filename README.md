@@ -26,7 +26,7 @@
 
 	python3 -m venv myvenv
 	source (your_path_to_venv_derectory)/bin/activate
-	pip install requirements.txt
+	pip install -r requirements.txt
 해당 명령어는 맥 이용자 기준입니다.
 
 
