@@ -15,7 +15,8 @@
             "name": "C++ Debug",
             "type": "lldb",
             "request": "launch",
-            "program": "{workspaceFolder}/main.cpp",
+            // "program": "{workspaceFolder}/main",
+            "program": "/Users/jp3pe/Documents/Project/KPU/Notice notificater/main",
             "args": [],
         }
     ]
