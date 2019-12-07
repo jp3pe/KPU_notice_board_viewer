@@ -3,14 +3,18 @@ services:
   data:
     stdin_open: true
     tty: true
+    # 만들어질 컨테이너의 이름
     container_name: kpu_bulletin_board_db
     image: kpu_bulletin_board_db
     restart: always
+    # MySQL 환경설정
     environment:
       MYSQL_ROOT_PASSWORD: "qwer1234"
+    # src:container의 포트를 바인딩
     ports:
       - "127.0.0.1:53306:3306"
       - "127.0.0.1:33060:33060"
+      # 컨테이너 외부로 노출시킬 포트(MySQL, MySQL 제어)
     expose:
       - "3306"
       - "33060"
