@@ -35,7 +35,8 @@
 C++을 컴파일하기 위해서 Clang++을 사용했으며 맥을 제외한 타 OS에서는 테스트를 해 보지 않았습니다.
 
 해당 소스파일을 컴파일 하기 위해선 mysql-connector-c++ 라이브러리가 필요합니다.
+전 brew 패키지 관리자를 이용해 설치했으며, 하단의 예시 명령어는 brew를 통해 설치된 라이브러리의 경로가 사용되었습니다.
 
 **예시**
 
-	clang++ --std=c++11 /usr/local/Cellar/mysql-connector-c++/8.0.18_1/lib/libmysqlcppconn8.dylib -g '/Users/jp3pe/Documents/Project/KPU/Notice notificater/main.cpp' -o '/Users/jp3pe/Documents/Project/KPU/Notice notificater/main'
+	clang++ --std=c++11 /usr/local/Cellar/mysql-connector-c++/8.0.18_1/lib/libmysqlcppconn8.dylib -g main.cpp -o main
