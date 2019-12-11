@@ -75,9 +75,12 @@ void programControl(int user_input)
         // rows에서 Row객체 형으로 추출해 출력을 위한 반복
         for (Row row : rows)
         {
-            cout << row[0] << endl;
-            cout << row[1] << endl
+            cout << "--글의 제목--" << endl;
+            cout << row[0] << endl
                  << endl;
+            cout << "--글의 본문--";
+            cout << row[1]
+                 << endl << endl << endl;
         }
         // DB 연결세션 종료
         session.close();
