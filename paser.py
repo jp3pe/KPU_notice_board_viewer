@@ -1,13 +1,13 @@
-from bs4 import BeautifulSoup
-import requests
 import mysql.connector
+import requests
+from bs4 import BeautifulSoup
 
 kpu = mysql.connector.connect(
     host="localhost",
     port="53306",
     user="root",
     passwd="qwer1234",
-    database = "kpu"
+    database="kpu"
 )
 
 mycursor = kpu.cursor()
@@ -58,10 +58,10 @@ for page_num in range(1, 6):
         soup = BeautifulSoup(page.text, 'html.parser')
         # 제목을 리스트에 저장
         title = soup.find(class_='subject')
-        titles.append(title.string)
+        titles.append(str(title.string))
         # 본문을 리스트에 저장
         article = soup.find(class_='article')
-        details.append(article.text)
+        details.append(str(article.text))
 
         # SQL 구문을 통한 DBMS 접근
         val = (titles[i], details[i])
